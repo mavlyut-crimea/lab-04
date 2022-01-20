@@ -19,7 +19,7 @@ public class ParserSymtab {
         return switch (other) {
             case 0 -> "DEFAULT";
             case 1 -> "HIDDEN";
-            default -> throw new AssertionError("Unknown vis");
+            default -> "UNKNOWN";
         };
     }
 
@@ -30,7 +30,7 @@ public class ParserSymtab {
             case 2 -> "WEAK";
             case 13 -> "LOPROC";
             case 15 -> "HIPROC";
-            default -> throw new AssertionError("Unknown bind");
+            default -> "UNKNOWN";
         };
     }
 
@@ -43,7 +43,7 @@ public class ParserSymtab {
             case 4 -> "FILE";
             case 13 -> "LOPROC";
             case 15 -> "HIPROC";
-            default -> throw new AssertionError("Unknown type");
+            default -> "UNKNOWN";
         };
     }
 }
